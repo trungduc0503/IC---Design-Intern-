@@ -1,0 +1,228 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f9; /* Màu nền sáng */
+  color: #333; /* Màu chữ chính */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Container for Sidebar and Content */
+.container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 300px;
+  background: #2c3e50; /* Màu nền sidebar */
+  color: #ecf0f1; /* Màu chữ sidebar */
+  padding: 20px;
+  text-align: center;
+  height: 120vh;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.sidebar img {
+  width: 250px;
+  height: 250px;
+  margin: 20px 0;
+  object-fit: cover;
+  border-radius: 0; /* Loại bỏ bo tròn để ảnh thành hình vuông */
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffcc00; /* Màu chữ vàng */
+}
+
+.sidebar p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #b0b0b0; /* Màu chữ phụ */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  background: rgba(255, 204, 0, 0.1); /* Màu nền vàng nhạt */
+}
+
+.sidebar ul li:hover {
+  background: rgba(255, 204, 0, 0.2); /* Màu nền vàng đậm hơn khi hover */
+  transform: translateX(5px);
+}
+
+.sidebar ul li a {
+  color: #ecf0f1; /* Màu chữ trắng */
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+}
+
+/* Content Styling */
+.content {
+  flex: 1;
+  padding: 40px;
+  background: #ffffff; /* Màu nền trắng */
+  overflow-y: auto;
+}
+
+/* Section Styling */
+section {
+  background: #ffffff; /* Màu nền trắng */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 5px solid #ffcc00; /* Viền trái màu vàng */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h2 {
+  color: #ffcc00; /* Màu chữ vàng */
+  font-size: 24px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #ffcc00; /* Viền dưới màu vàng */
+  padding-bottom: 5px;
+}
+
+h3 {
+  color: #333; /* Màu chữ chính */
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+p, ul li {
+  color: #555; /* Màu chữ phụ */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Skills List */
+.skills {
+  list-style: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 5px 0;
+  padding: 5px 10px;
+  background: #f9f9f9; /* Màu nền sáng */
+  border: 1px solid #ffcc00; /* Viền vàng */
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #333; /* Màu chữ chính */
+}
+
+/* Project Cards */
+.project {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #f9f9f9; /* Màu nền sáng */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+  font-size: 18px;
+  color: #333; /* Màu chữ chính */
+  margin-bottom: 5px;
+}
+
+.project p {
+  font-size: 14px;
+  color: #555; /* Màu chữ phụ */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  section {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p, ul li {
+    font-size: 12px;
+  }
+
+  .skills li {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+/* Optional: Add smooth transition for toggle effect */
+#content-info {
+  transition: all 0.3s ease;
+}
+/* Optional: Add smooth transition for toggle effect */
+#skills-info {
+  transition: all 0.3s ease;
+}
+/* Optional: Add smooth transition for toggle effect */
+#hobbies-info {
+  transition: all 0.3s ease;
+}
+#career-objective-info {
+  transition: all 0.3s ease;
+}
+/* Optional: Add smooth transition for toggle effect */
+#education-info {
+  transition: all 0.3s ease;
+}
+/* Optional: Add smooth transition for toggle effect */
+#certifications-info {
+  transition: all 0.3s ease;
+}
+/* Optional: Add smooth transition for toggle effect */
+#additional-info {
+  transition: all 0.3s ease;
+}
